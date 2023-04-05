@@ -1,27 +1,21 @@
-Write a function that prints a string, followed by a new line.
-
-Prototype: void _puts_recursion(char *s);
-FYI: The standard library provides a similar function: puts. Run man puts to learn more.
-
-julien@ubuntu:~/0x08. Recursion$ cat 0-main.c
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _puts_recursion - prints a string, followed by a new line
+ * @s: pointer to a string
  */
-int main(void)
-{
-    _puts_recursion("Puts with recursion");
-    return (0);
-}
-julien@ubuntu:~/0x08. Recursion$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-main.c 0-puts_recursion.c -o 0-puts_recursion
-julien@ubuntu:~/0x08. Recursion$ ./0-puts_recursion 
-Puts with recursion
-julien@ubuntu:~/0x08. Recursion$ 
-Repo:
 
-GitHub repository: alx-low_level_programming
-Directory: 0x08-recursion
-File: 0-puts_recursion.c			
+void _puts_recursion(char *s)
+{
+        char *s1 = s;
+
+        if (*s1 != '\0')
+        {
+                _putchar(*s1);
+                s1++;
+                _puts_recursion(s1);
+        }
+        else
+                _putchar('\n');
+}
+
