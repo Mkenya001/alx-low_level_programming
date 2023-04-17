@@ -1,4 +1,3 @@
-julien@ubuntu:~/0x0c. macro, structures$ cat 3-main.c
 #include <stdio.h>
 #include "3-function_like_macro.h"
 #include "3-function_like_macro.h"
